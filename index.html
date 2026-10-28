@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonder Design | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080808;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            border-bottom: 1px solid #292929;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4af37;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background:
+                radial-gradient(
+                    circle at top,
+                    #29200b 0%,
+                    #080808 65%
+                );
+        }
+
+        .badge {
+            color: #d4af37;
+            border: 1px solid #d4af37;
+            padding: 7px 16px;
+            border-radius: 30px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 9vw, 72px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero p {
+            color: #bdbdbd;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #d4af37;
+            color: #080808;
+            padding: 13px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: #d4af37;
+        }
+
+        .section-description {
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            color: #c4c4c4;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: #141414;
+            border: 1px solid #292929;
+            padding: 30px 22px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-6px);
+            border-color: #d4af37;
+        }
+
+        .project .number {
+            color: #d4af37;
+            font-size: 14px;
+        }
+
+        .project h3 {
+            margin: 12px 0;
+        }
+
+        .project p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 10px 18px;
+            border: 1px solid #4a3b14;
+            border-radius: 5px;
+            color: #e4ca78;
+            background: #15120a;
+        }
+
+        .contact {
+            text-align: center;
+            background: #111;
+        }
+
+        .contact p {
+            color: #aaa;
+            margin: 15px 0 25px;
+        }
+
+        footer {
+            padding: 25px 15px;
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+            border-top: 1px solid #292929;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 18px 5%;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">WONDER.</div>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="accueil">
+          <div class="profile-container">
+    <img src="images/profil.png"
+         alt="Photo de profil Wonder Design"
+         class="profile-photo">
+          </div>
+            <div class="badge">PORTFOLIO PROFESSIONNEL</div>
+
+            <h1>
+                Bonjour, je suis<br>
+                <span>Wonder Design</span>
+            </h1>
+
+            <p>
+                Créativité, vision et innovation.
+                Découvrez mon univers, mes compétences
+                et les projets qui représentent mon travail.
+            </p>
+
+            <a href="#projets" class="button">
+                Découvrir mes projets →
+            </a>
+        </section>
+
+        <section id="apropos">
+            <h2 class="section-title">
+                À <span>propos</span>
+            </h2>
+
+            <p class="section-description">
+                Apprenez à me connaître
+            </p>
+
+            <div class="about">
+                <p>
+                    Bienvenue dans mon portfolio.
+                    Je suis une personne passionnée par
+                    la créativité, l'apprentissage et la
+                    réalisation de projets de qualité.
+                    Mon objectif est de transformer les idées
+                    en réalisations modernes et utiles.
+                </p>
+            </div>
+        </section>
+
+        <section id="projets">
+            <h2 class="section-title">
+                Mes <span>projets</span>
+            </h2>
+
+            <p class="section-description">
+                Quelques exemples de réalisations
+            </p>
+
+            <div class="projects">
+
+                <article class="project">
+                    <div class="number">PROJET 01</div>
+                    <h3>Design créatif</h3>
+                    <p>
+                        Des concepts visuels modernes
+                        qui donnent vie aux idées.
+                    </p>
+                </article>
+
+                <article class="project">
+                    <div class="number">PROJET 02</div>
+                    <h3>Site web</h3>
+                    <p>
+                        Des interfaces élégantes,
+                        rapides et adaptées aux mobiles.
+                    </p>
+                </article>
+
+                <article class="project">
+                    <div class="number">PROJET 03</div>
+                    <h3>Identité visuelle</h3>
+                    <p>
+                        Une présentation cohérente
+                        pour une identité remarquable.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="competences">
+            <h2 class="section-title">
+                Mes <span>compétences</span>
+            </h2>
+
+            <p class="section-description">
+                Les domaines que je développe
+            </p>
+
+            <div class="skills">
+                <div class="skill">Créativité</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">Design</div>
+                <div class="skill">Communication</div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="section-title">
+                Travaillons <span>ensemble</span>
+            </h2>
+
+            <p>
+                Vous avez une idée ou un projet ?
+                Prenons contact.
+            </p>
+
+            <a
+                class="button"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=jodelinm50@gmail.com"
+            >
+                Me contacter
+          <a
+    class="button whatsapp-button"
+    href="https://wa.me/50941561968"
+    target="_blank">
+    Me contacter sur WhatsApp
+          </a>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 <span>Wonder Design</span>.
+        Tous droits réservés.
+    </footer>
+
+</body>
+</html>
